@@ -1,0 +1,1 @@
+k get appproject -n argocd -o yaml
