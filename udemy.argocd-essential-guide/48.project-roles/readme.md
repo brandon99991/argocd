@@ -14,3 +14,5 @@ Create token succeeded for proj:project-with-role:ci-role.
   $ argocd app list
 
   $ argocd app delete guestbook-dev-project --auth-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJwcm9qOnByb2plY3Qtd2l0aC1yb2xlOmNpLXJvbGUiLCJuYmYiOjE3Njc3OTU4OTksImlhdCI6MTc2Nzc5NTg5OSwianRpIjoiOTAyN2I0MmUtNDA1YS00NzUwLTllNDUtMWZiNjI0MmIwNWFhIn0.GEXxWVA_A3GE9XnegpM_on7txLNuqMPoCfWWh3ZfRwo
+
+  $ kubectl -n argocd get application guestbook-dev-project -o jsonpath='{.spec.project}{"\n"}'
